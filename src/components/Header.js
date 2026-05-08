@@ -30,7 +30,7 @@ const Header = ({ currentPage, navigate }) => {
   return (
     <header className="header">
       <div className="logo" onClick={handleNavClick("/")}>
-        UrbanPantry
+        Maruti Jewels
       </div>
       <nav>
         <a
