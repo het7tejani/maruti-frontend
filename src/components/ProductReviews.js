@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { fetchReviewsForProduct, createReview } from '../api';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
@@ -38,7 +38,7 @@ const ProductReviews = ({ productId, onReviewSubmitted }) => {
     
     const hasUserReviewed = reviews.some(review => review.user?._id === user?.id);
 
-    const fetchReviews = async () => {
+    const fetchReviews = useCallback(async () => {
         setLoading(true);
         setError('');
         try {
@@ -49,11 +49,11 @@ const ProductReviews = ({ productId, onReviewSubmitted }) => {
         } finally {
             setLoading(false);
         }
-    };
+    }, [productId]);
     
     useEffect(() => {
         fetchReviews();
-    }, [productId]);
+    }, [fetchReviews]);
     
     const handleReviewSubmit = async (e) => {
         e.preventDefault();

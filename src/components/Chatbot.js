@@ -16,7 +16,7 @@ const Chatbot = ({ navigate }) => {
                 products: [],
             }]);
         }
-    }, [isOpen]);
+    }, [isOpen, messages.length]);
 
     useEffect(() => {
         if (chatBodyRef.current) {
