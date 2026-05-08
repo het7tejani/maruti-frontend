@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https:///maruti-server.onrender.com/api/';
+const API_BASE_URL = 'https://maruti-server.onrender.com/api/';
 
 const handleResponse = async (response) => {
     // Try to parse the response as JSON, but fall back to text if it fails

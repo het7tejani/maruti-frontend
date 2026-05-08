@@ -3,7 +3,7 @@ import { searchProducts } from '../api';
 import ProductGrid from '../components/ProductGrid';
 import FilterSidebar from '../components/FilterSidebar';
 
-const SearchPage = ({ onViewProduct, navigate }) => {
+const SearchPage = ({ onViewProduct, navigate, location }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -39,7 +39,7 @@ const SearchPage = ({ onViewProduct, navigate }) => {
             setProducts([]);
             setLoading(false);
         }
-    }, [window.location.search, filters]);
+    }, [location, filters]);
     
     const handleFilterChange = (newFilters) => {
         setFilters(newFilters);

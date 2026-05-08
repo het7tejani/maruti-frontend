@@ -123,7 +123,7 @@ const App = () => {
                     : <LoginPage navigate={navigate} redirectTo="/profile" />;
 
             case '/search':
-                return <SearchPage onViewProduct={handleViewProduct} navigate={navigate} />;
+                return <SearchPage onViewProduct={handleViewProduct} navigate={navigate} location={location} />;
 
             case '/wishlist':
                 return <WishlistPage onViewProduct={handleViewProduct} navigate={navigate} />;
