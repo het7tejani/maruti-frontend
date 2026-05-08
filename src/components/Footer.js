@@ -26,15 +26,15 @@ const Footer = ({ navigate }) => {
                 </div>
                 <div className="footer-column">
                     <h3 className="footer-title">About</h3>
-                    <a href="#" className="footer-link">Our Story</a>
-                    <a href="#" className="footer-link">Contact</a>
-                    <a href="#" className="footer-link">FAQs</a>
+                    <a href="/" className="footer-link">Our Story</a>
+                    <a href="/" className="footer-link">Contact</a>
+                    <a href="/" className="footer-link">FAQs</a>
                 </div>
                 <div className="footer-column">
                     <h3 className="footer-title">Follow Us</h3>
-                    <a href="#" className="footer-link">Instagram</a>
-                    <a href="#" className="footer-link">Pinterest</a>
-                    <a href="#" className="footer-link">Facebook</a>
+                    <a href="/" className="footer-link">Instagram</a>
+                    <a href="/" className="footer-link">Pinterest</a>
+                    <a href="/" className="footer-link">Facebook</a>
                 </div>
             </div>
             <div className="footer-bottom">
